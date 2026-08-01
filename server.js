@@ -11,7 +11,7 @@ const crypto = require('crypto');
 
 // ===================== CONFIGURATION =====================
 
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 if (!SESSION_SECRET) {
   console.error('FATAL: SESSION_SECRET environment variable is not set. Refusing to start.');

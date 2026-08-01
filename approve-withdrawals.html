@@ -4,9 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Approve Withdrawals - Vision Invest</title>
-
 <link rel="stylesheet" href="css/admin.css">
-
+<style>
+.status-badge { padding: 3px 8px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+.status-active, .status-approved { background: #d1e7dd; color: #0a3622; }
+.status-pending  { background: #fff3cd; color: #856404; }
+.status-rejected { background: #f8d7da; color: #58151c; }
+.btn-approve { background:#198754;color:#fff;border:none;padding:5px 10px;border-radius:4px;cursor:pointer;margin-right:4px; }
+.btn-reject  { background:#dc3545;color:#fff;border:none;padding:5px 10px;border-radius:4px;cursor:pointer; }
+</style>
 </head>
 <body>
 
@@ -14,29 +20,25 @@
 
 <h1>Approve Withdrawals</h1>
 
-<table class="user-table">
+<p><a href="admin-dashboard.html">← Back to Dashboard</a></p>
 
+<table class="user-table">
+<thead>
 <tr>
 <th>User</th>
 <th>Amount</th>
 <th>Method</th>
 <th>Status</th>
+<th>Actions</th>
 </tr>
-
-<tr>
-<td>user</td>
-<td>$800</td>
-<td>Bank Transfer</td>
-<td>Pending</td>
-</tr>
-
+</thead>
+<tbody id="withdrawals-tbody">
+<tr><td colspan="5" style="text-align:center;padding:20px;">Loading...</td></tr>
+</tbody>
 </table>
-
-<br>
-
-<button class="admin-btn">Approve Withdrawal</button>
 
 </div>
 
+<script src="js/approve-withdrawals.js"></script>
 </body>
 </html>

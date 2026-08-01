@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Admin Login - Vision Invest</title>
-
 <link rel="stylesheet" href="css/admin.css">
-
 </head>
 
 <body>
 
 <div class="login-container">
 
-<img src="images/logo.png" class="logo">
+<img src="images/logo.png" class="logo" alt="Vision Invest">
 
 <h1>Admin Login</h1>
 
-<input type="text" placeholder="Admin Username">
+<input type="text" id="admin-username" placeholder="Admin Username">
 
-<input type="password" placeholder="Password">
+<input type="password" id="admin-password" placeholder="Password">
 
-<button class="admin-btn">Login</button>
+<p id="admin-login-error" style="color:red;display:none;font-size:14px;"></p>
+
+<button id="admin-login-btn" class="admin-btn">Login</button>
 
 </div>
 
+<script src="js/admin-login.js"></script>
 </body>
 </html>

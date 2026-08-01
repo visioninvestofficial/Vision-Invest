@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Withdraw - Vision Invest</title>
-
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,28 +15,33 @@
 
 <p>Request a withdrawal from your available balance.</p>
 
-<input type="text" placeholder="Full Name">
+<input type="text" id="withdraw-name" placeholder="Full Name">
 
-<input type="email" placeholder="Email Address">
+<input type="email" id="withdraw-email" placeholder="Email Address">
 
-<input type="number" placeholder="Amount">
+<input type="number" id="withdraw-amount" placeholder="Amount (min $800)">
 
-<select>
-    <option>Select Withdrawal Method</option>
-    <option>Bank Transfer</option>
-    <option>USDT (TRC20)</option>
-    <option>Bitcoin (BTC)</option>
+<select id="withdraw-method">
+    <option value="">Select Withdrawal Method</option>
+    <option value="Bank Transfer">Bank Transfer</option>
+    <option value="USDT (TRC20)">USDT (TRC20)</option>
+    <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>
 </select>
 
-<input type="text" placeholder="Bank Account / Wallet Address">
+<input type="text" id="withdraw-address" placeholder="Bank Account / Wallet Address">
 
-<button class="btn">Request Withdrawal</button>
+<p id="withdraw-message" style="display:none;margin-top:10px;padding:10px;border-radius:5px;"></p>
 
-<p style="color:red;font-weight:bold;">
+<button id="withdraw-btn" class="btn">Request Withdrawal</button>
+
+<p style="color:red;font-weight:bold;margin-top:10px;">
 Minimum withdrawal: $800
 </p>
 
+<p style="margin-top:10px;"><a href="dashboard.html">← Back to Dashboard</a></p>
+
 </div>
 
+<script src="js/withdraw.js"></script>
 </body>
 </html>

@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Referral - Vision Invest</title>
-
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -19,27 +17,26 @@
 
 <h3>Your Referral Link</h3>
 
-<input type="text"
-value="https://visioninvest.com/register?ref=USERNAME"
-readonly>
+<input type="text" id="referral-link" value="" readonly style="width:100%;box-sizing:border-box;">
 
-<button class="btn">Copy Referral Link</button>
+<button id="copy-btn" class="btn">Copy Referral Link</button>
 
-<div class="plan">
-
-<h2>Total Referrals</h2>
-<h3>0</h3>
-
+<div class="plan" style="margin-top:20px;">
+    <h2>Total Referrals</h2>
+    <h3 id="referral-count">0</h3>
 </div>
 
 <div class="plan">
+    <h2>Referral Earnings</h2>
+    <h3 id="referral-earnings">$0.00</h3>
+</div>
 
-<h2>Referral Earnings</h2>
-<h3>$0.00</h3>
+<ul id="referral-list" style="margin-top:15px;list-style:none;padding:0;"></ul>
+
+<p style="margin-top:15px;"><a href="dashboard.html">← Back to Dashboard</a></p>
 
 </div>
 
-</div>
-
+<script src="js/referral.js"></script>
 </body>
 </html>

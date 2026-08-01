@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Referral Management - Vision Invest</title>
-
 <link rel="stylesheet" href="css/admin.css">
-
+<style>
+.status-badge { padding: 3px 8px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+.status-active   { background: #d1e7dd; color: #0a3622; }
+.status-suspended { background: #f8d7da; color: #58151c; }
+.msg-success { color:green;background:#d1e7dd;padding:8px;border-radius:4px;margin-top:8px; }
+.msg-error   { color:red;background:#f8d7da;padding:8px;border-radius:4px;margin-top:8px; }
+</style>
 </head>
 <body>
 
@@ -14,35 +19,32 @@
 
 <h1>Referral Management</h1>
 
-<table class="user-table">
+<p><a href="admin-dashboard.html">← Back to Dashboard</a></p>
 
+<table class="user-table">
+<thead>
 <tr>
 <th>User</th>
 <th>Referrals</th>
 <th>Earnings</th>
 <th>Status</th>
 </tr>
-
-<tr>
-<td>user</td>
-<td>0</td>
-<td>$0.00</td>
-<td>Active</td>
-</tr>
-
+</thead>
+<tbody id="referrals-tbody">
+<tr><td colspan="4" style="text-align:center;padding:20px;">Loading...</td></tr>
+</tbody>
 </table>
 
 <br>
 
-<input type="text" placeholder="Enter Username">
-
-<input type="number" placeholder="Referral Bonus">
-
-<button class="admin-btn">
-Update Referral
-</button>
+<h3>Set Referral Bonus</h3>
+<input type="text" id="referral-username" placeholder="Enter Username">
+<input type="number" id="referral-bonus" placeholder="Referral Bonus Amount" min="0" step="0.01">
+<button id="update-referral-btn" class="admin-btn">Update Referral</button>
+<p id="referral-update-message" style="display:none;"></p>
 
 </div>
 
+<script src="js/referral-management.js"></script>
 </body>
 </html>

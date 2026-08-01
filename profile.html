@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profile - Vision Invest</title>
-
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -17,22 +15,23 @@
 
 <img src="images/user.png" class="profile-pic" alt="Profile">
 
-<input type="text" value="Full Name" readonly>
+<input type="text" id="profile-name-input" value="" readonly>
 
-<input type="text" value="Username" readonly>
+<input type="text" id="profile-username-input" value="" readonly>
 
-<input type="email" value="Email Address" readonly>
+<input type="email" id="profile-email-input" value="" readonly>
 
-<input type="text" value="Member Since: July 2026" readonly>
+<input type="text" id="profile-joined-input" value="" readonly>
 
 <div class="plan">
-<h2>Account Status</h2>
-<h3 style="color:green;">Active</h3>
+    <h2>Account Status</h2>
+    <h3 id="profile-status" style="color:green;">Active</h3>
 </div>
 
-<button class="btn">Edit Profile</button>
+<p style="margin-top:15px;"><a href="dashboard.html">← Back to Dashboard</a></p>
 
 </div>
 
+<script src="js/profile.js"></script>
 </body>
 </html>

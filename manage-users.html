@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manage Users - Vision Invest</title>
-
 <link rel="stylesheet" href="css/admin.css">
-
+<style>
+.status-badge { padding: 3px 8px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+.status-active   { background: #d1e7dd; color: #0a3622; }
+.status-suspended { background: #f8d7da; color: #58151c; }
+.btn-approve { background:#198754;color:#fff;border:none;padding:5px 10px;border-radius:4px;cursor:pointer;margin-right:4px; }
+.btn-reject  { background:#dc3545;color:#fff;border:none;padding:5px 10px;border-radius:4px;cursor:pointer; }
+.msg-success { color:green;background:#d1e7dd;padding:8px;border-radius:4px;margin-top:8px; }
+.msg-error   { color:red;background:#f8d7da;padding:8px;border-radius:4px;margin-top:8px; }
+</style>
 </head>
 <body>
 
@@ -14,33 +21,33 @@
 
 <h1>Manage Users</h1>
 
-<table class="user-table">
+<p><a href="admin-dashboard.html">← Back to Dashboard</a></p>
 
+<table class="user-table">
+<thead>
 <tr>
 <th>Username</th>
 <th>Balance</th>
+<th>Plan</th>
 <th>Status</th>
+<th>Actions</th>
 </tr>
-
-<tr>
-<td>user</td>
-<td>$0.00</td>
-<td>Active</td>
-</tr>
-
+</thead>
+<tbody id="users-tbody">
+<tr><td colspan="5" style="text-align:center;padding:20px;">Loading...</td></tr>
+</tbody>
 </table>
 
 <br>
 
-<input type="text" placeholder="Enter Username">
-
-<input type="number" placeholder="New Balance">
-
-<button class="admin-btn">
-Update Balance
-</button>
+<h3>Update User Balance</h3>
+<input type="text" id="update-username" placeholder="Enter Username">
+<input type="number" id="update-balance" placeholder="New Balance" min="0" step="0.01">
+<button id="update-balance-btn" class="admin-btn">Update Balance</button>
+<p id="update-message" style="display:none;"></p>
 
 </div>
 
+<script src="js/manage-users.js"></script>
 </body>
 </html>

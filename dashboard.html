@@ -4,43 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard - Vision Invest</title>
-
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashboard.css">
-
 </head>
 
 <body>
 
 <div class="dashboard">
 
-    <h1>Welcome 👋</h1>
+    <h1>Welcome 👋 <span id="user-name"></span></h1>
 
     <div class="balance-card">
 
-    <h2>Available Balance</h2>
-    <h1>$0.00</h1>
+        <h2>Available Balance</h2>
+        <h1 id="balance">$0.00</h1>
 
-    <div class="balance-info">
+        <div class="balance-info">
 
-        <div>
-            <h3>Welcome Bonus</h3>
-            <p>$50.00 (Locked)</p>
+            <div>
+                <h3>Welcome Bonus</h3>
+                <p id="welcome-bonus">$50.00 (Pending)</p>
+            </div>
+
+            <div>
+                <h3>Active Investment</h3>
+                <p id="active-plan">None</p>
+            </div>
+
+            <div>
+                <h3>Referral Earnings</h3>
+                <p id="referral-earnings">$0.00</p>
+            </div>
+
         </div>
 
-        <div>
-            <h3>Active Investment</h3>
-            <p>None</p>
-        </div>
-
-        <div>
-            <h3>Referral Earnings</h3>
-            <p>$0.00</p>
-        </div>
-
-    </div>
-
-  
     </div>
 
     <div class="dashboard-grid">
@@ -70,7 +67,7 @@
             <p>Manage account</p>
         </a>
 
-        <a href="index.html" class="dash-card">
+        <a href="#" id="logout-btn" class="dash-card">
             <h3>🚪 Logout</h3>
             <p>Sign out</p>
         </a>
@@ -79,5 +76,6 @@
 
 </div>
 
+<script src="js/dashboard.js"></script>
 </body>
 </html>

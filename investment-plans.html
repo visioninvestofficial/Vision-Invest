@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Investment Plans - Vision Invest</title>
-
 <link rel="stylesheet" href="css/admin.css">
-
+<style>
+.status-badge { padding: 3px 8px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+.status-active { background: #d1e7dd; color: #0a3622; }
+</style>
 </head>
 <body>
 
@@ -14,45 +16,23 @@
 
 <h1>Investment Plans</h1>
 
-<table class="user-table">
+<p><a href="admin-dashboard.html">← Back to Dashboard</a></p>
 
+<table class="user-table">
+<thead>
 <tr>
 <th>Plan</th>
 <th>Amount</th>
 <th>Status</th>
 </tr>
-
-<tr>
-<td>Starter</td>
-<td>$150</td>
-<td>Active</td>
-</tr>
-
-<tr>
-<td>Silver</td>
-<td>$300</td>
-<td>Active</td>
-</tr>
-
-<tr>
-<td>Gold</td>
-<td>$500</td>
-<td>Active</td>
-</tr>
-
-<tr>
-<td>Premium</td>
-<td>$1000</td>
-<td>Active</td>
-</tr>
-
+</thead>
+<tbody id="plans-tbody">
+<tr><td colspan="3" style="text-align:center;padding:20px;">Loading...</td></tr>
+</tbody>
 </table>
-
-<br>
-
-<button class="admin-btn">Update Plans</button>
 
 </div>
 
+<script src="js/investment-plans.js"></script>
 </body>
 </html>
